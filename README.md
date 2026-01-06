@@ -1,7 +1,8 @@
 # CSV to SQL avec SSMS
 ## Objectif
-Importer des données depuis des fichiers CSV vers une base SQL en utilisant SQL Server Management Studio (SSMS). Le projet permet de manipuler et organiser les données pour faciliter l'analyse.
-
+Parcourir le cycle complet (ETL/ELT) pour construire un Modèle de Données Prêt pour le
+Business (Gold Layer) à partir des sources brutes (Bronze Layer), en utilisant les
+spécifications et meilleures pratiques présentées.
 ## Technologies utilisées
 - SQL Server / SSMS
 - SQL (Création des tables, Insert, Select, Update)
