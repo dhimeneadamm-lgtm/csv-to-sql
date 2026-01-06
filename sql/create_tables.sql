@@ -1,6 +1,6 @@
 -- =============================================
 -- Script: ddl_tables.sql
--- Description: Création du modèle relationnel initial
+-- Description: CrÃ©ation du modÃ¨le relationnel initial
 -- Tables: Contact, Session, Inscription, Facture, etc.
 -- =============================================
 IF NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'Contact')
@@ -324,19 +324,19 @@ UNIQUE NONCLUSTERED
 ) ON [PRIMARY]
 GO
 
--- Ajouter la clé étrangère pour Formateur.SocieteFormateurId
+-- Ajouter la clÃ© Ã©trangÃ¨re pour Formateur.SocieteFormateurId
 ALTER TABLE [Formateur].[Formateur]
 ADD CONSTRAINT [fk_Formateur_SocieteFormateur] 
 FOREIGN KEY([SocieteFormateurId])
 REFERENCES [Formateur].[SocieteFormateur] ([SocieteFormateurId])
 GO
 
--- Ajouter la clé étrangère pour Session.FormateurId
+-- Ajouter la clÃ© Ã©trangÃ¨re pour Session.FormateurId
 ALTER TABLE [Stage].[Session]
 ADD CONSTRAINT [fk_Session_Formateur] 
 FOREIGN KEY([FormateurId])
 REFERENCES [Formateur].[Formateur] ([FormateurId])
 GO
 
-PRINT 'Modèle relationnel initial créé avec succès.'
+PRINT 'ModÃ¨le relationnel initial crÃ©Ã© avec succÃ¨s.'
 GO
